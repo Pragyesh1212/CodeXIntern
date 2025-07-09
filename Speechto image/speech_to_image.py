@@ -3,6 +3,7 @@ import requests
 import webbrowser
 import speech_recognition as sr
 
+#Speech to text
 r = sr.Recognizer()
 with sr.Microphone() as source:
     print('Say the Propmt to generate the image:')
@@ -11,6 +12,7 @@ with sr.Microphone() as source:
     t = r.recognize_google(audio, language='en-US')
     print("Prompt:", t)
 
+#text to image
 api_key='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjhlM2M3NDA4ZjFmNDhhNjkwYzlmMjUwMjZhYjdiZDVmIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDdUMDA6MzE6NTYuMjQ0NjcxIn0.B0pFX7n1xHNJCQov5RypePQZWwDo9FFlqQr4btFq0Nc'
 
 monster_client=client(api_key)
